@@ -15,5 +15,39 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.quote-container {
+width: auto;
+max-width: 900px;
+padding: 20px 30px;
+border-radius: 20px;
+background-color: rgba(225, 225, 225, 0.4);
+box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.quote-text{
+    font-size: 2.75rem;
+}
+.long-quote {
+    font-size: 2rem;
+}
+.fa-quote-left {
+    font-size: 4rem;
+}
+.quote-autor {
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+/* Media Query */
+@media screen and (max-width: 1000px) {
+    .quote-container {
+        margin: auto 10px;
+    }
+    .quote-text {
+        font-size: 2rem;
+    }
+    .quote-autor {
+        font-size: 1.75rem;
+    }
+}
 
