@@ -7,12 +7,25 @@ const newQuoteBtn = document.getElementById('new-quote');
 // const loader = document.getElementById('loader');
 
 let apiQuotes = [];
+
 // show new quote
-function newQuote(){
+function newQuote() {
     // rendomizer in Quote Api arraw
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    autherText.textContent = quote.author;
-    quoteText.textContent = quote.text;
+
+    // Check the Author field is blank
+    if(!quote.author) {
+        authorText.textContent = 'Unknown';
+    } else {
+        authorText.textContent = quote.author;
+    }
+    // check the lenght of the quote to determan styling
+    if (quote.text.length > 120) {
+        quoteText.classList.add('long-quote');
+    } else {
+        quoteText.textContent = quote.text;
+    }
+    
 }
 
 // Get Quotes From API
