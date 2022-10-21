@@ -23,9 +23,9 @@ function newQuote() {
     if (quote.text.length > 120) {
         quoteText.classList.add('long-quote');
     } else {
-        quoteText.textContent = quote.text;
+        quoteText.classList.remove('long-quote');
     }
-    
+    quoteText.textContent = quote.text;
 }
 
 // Get Quotes From API
