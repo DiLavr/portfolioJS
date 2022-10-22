@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 html {
     box-sizing: border-box;
 }
 body {
     margin: 0;
-    min-height: 100vh;
     background: burlywood;
+    font-family: 'Pacifico', cursive;
+}
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+h2 {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 400
+    ;
+    letter-spacing: 5px;
 }
