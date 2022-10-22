@@ -5,7 +5,7 @@ html {
 }
 body {
     margin: 0;
-    background: burlywood;
+    background: whitesmoke;
     font-family: 'Pacifico', cursive;
 }
 h1 {
@@ -23,4 +23,20 @@ h2 {
     font-weight: 400
     ;
     letter-spacing: 5px;
+}
+/* loader */
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.loader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* centering an image in the center of the page and the center of the img */
+    transform: translate(-50%, -50%);
 }
