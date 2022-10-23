@@ -40,3 +40,28 @@ h2 {
     /* centering an image in the center of the page and the center of the img */
     transform: translate(-50%, -50%);
 }
+/* image container */
+
+.image-container {
+    margin: 10px 30%;
+}
+.image-container img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Media queryL Lagre Smartphone */
+
+@media screen and (max-width: 600px) {
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+}
+.image-container {
+    margin: 10px;
+}
+
+
+}
