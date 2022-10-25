@@ -33,6 +33,7 @@ h2 {
     right: 0;
     background-color: rgba(255, 255, 255, 0.8);
 }
+
 .loader img {
     position: fixed;
     top: 50%;
@@ -40,8 +41,8 @@ h2 {
     /* centering an image in the center of the page and the center of the img */
     transform: translate(-50%, -50%);
 }
-/* image container */
 
+/* image container */
 .image-container {
     margin: 10px 30%;
 }
@@ -62,6 +63,4 @@ h2 {
 .image-container {
     margin: 10px;
 }
-
-
 }
