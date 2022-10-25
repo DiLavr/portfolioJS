@@ -1,4 +1,3 @@
-
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
 
@@ -8,7 +7,7 @@ let totalImages = 0;
 let photosArray = [];
 
 // Unsplash API
-const count = 10;
+const count = 30;
 // Normally, don't store API Keys like this, but an exception made here because it is free, and the data is publicly available!
 const apiKey = '1QkNlH-dCqns8H1TLrNU6FglGz8nNtLn_KV_mxShHuc';
 const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}`;
@@ -18,7 +17,6 @@ function imageLoaded() {
   imagesLoaded++;
   if (imagesLoaded === totalImages) {
     ready = true;
-    // show the loader only during the first load
     loader.hidden = true;
   }
 }
