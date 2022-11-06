@@ -7,6 +7,7 @@ body {
     margin: 0;
     height: 90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Press Start 2P', cursive;
@@ -19,9 +20,15 @@ body {
 
 .h1{
     margin: 10px;
-    
-    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
 }
+.sub {
+  margin-bottom: 2em;
+}
+
 .button-53 {
     background-color: rgb(215, 147, 58);
     border: 0 solid #E5E7EB;
