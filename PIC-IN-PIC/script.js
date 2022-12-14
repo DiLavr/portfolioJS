@@ -1,30 +1,28 @@
 const videoElement = document.getElementById('video');
 const button = document.getElementById('button');
 
-// Promt user to select a video strime, pass video to element, then play video
-
+// Prompt to select media stream, pass to video element, then play
 async function selectMediaStream() {
   try {
-    // screen capture API
-    const mediaSteam = await navigator.mediaDevices.getDisplayMedia();
-    videoElement.srcObject = mediaSteam;
+    const mediaStream = await navigator.mediaDevices.getDisplayMedia();
+    videoElement.srcObject = mediaStream;
     videoElement.onloadedmetadata = () => {
       videoElement.play();
     };
   } catch (error) {
-    // Catch error here
-    console.log('whoops, error here:', error);
+    // Catch Error Here
   }
 }
 
 button.addEventListener('click', async () => {
-    // disable the button
-    button,disabled = true;
-    // start pic in pic
-    await videoElement.requestPictureInPicture();
-    // reset Button
-    button.desabled = false;
+  // Disable Button
+  button.disabled = true;
+  // Start Picture in Picture
+  await videoElement.requestPictureInPicture();
+  // Reset Button
+  button.disabled = false;
 });
 
-// on load
+// On Load
 selectMediaStream();
+
