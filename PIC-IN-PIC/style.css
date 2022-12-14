@@ -28,7 +28,11 @@ body {
 }
 
 .sub {
-  margin-bottom: 2em;
+  margin: 2em;
+}
+
+.discription{
+  margin: 2em;
 }
 
 .button-53 {
