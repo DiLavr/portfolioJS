@@ -93,12 +93,19 @@ const VoiceRSS = {
 
 // Get Joke from Joke api
 async function getJokes() {
+    let joke = '';
     const apiUrl = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
     try {
        const response = await fetch(apiUrl);
        const data = await response.json();
-       console.log(data);
-         
+    //    if there is a setup, which is only in 2 part jokes (there is 1 part joke and 2 part joke in JokeAPI)
+       if (data.setup) {
+        // we glue 2 part of the joke in to one by merging the string
+        joke = `${data.setup} ... ${data.delivery}`;
+       } else {
+        joke = data.joke;
+       }
+        console.log(joke); 
     } catch (error) {
         // catch errors
         console.log('not working', error);
