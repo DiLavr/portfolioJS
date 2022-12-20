@@ -1,10 +1,16 @@
+/**
+ * The button that toggles the audio.       
+ * @type {HTMLButtonElement}       
+ */
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
 
-
-
-
 // VoiceRSS Javascript SDK
+/**
+ * This is the main function for the VoiceRSS API.           
+ * @param {object} settings - The settings for the API.           
+ * @returns None           
+ */
 const VoiceRSS = {
     speech: function (e) {
         this._validate(e), this._request(e)
@@ -96,19 +102,20 @@ async function getJokes() {
     let joke = '';
     const apiUrl = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
     try {
-       const response = await fetch(apiUrl);
-       const data = await response.json();
-    //    if there is a setup, which is only in 2 part jokes (there is 1 part joke and 2 part joke in JokeAPI)
-       if (data.setup) {
-        // we glue 2 part of the joke in to one by merging the string
-        joke = `${data.setup} ... ${data.delivery}`;
-       } else {
-        joke = data.joke;
-       }
-        console.log(joke); 
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        //    if there is a setup, which is only in 2 part jokes (there is 1 part joke and 2 part joke in JokeAPI)
+        if (data.setup) {
+            // we glue 2 part of the joke in to one by merging the string; 2part joke will be seporated with ...
+            joke = `${data.setup} ... ${data.delivery}`;
+        } else {
+            joke = data.joke;
+        }
+        console.log(joke);
     } catch (error) {
         // catch errors
         console.log('not working', error);
     }
 }
 getJokes();
+// 
