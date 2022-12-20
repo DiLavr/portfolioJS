@@ -1,5 +1,9 @@
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
+
+
+
+
 // VoiceRSS Javascript SDK
 const VoiceRSS = {
     speech: function (e) {
@@ -75,14 +79,29 @@ const VoiceRSS = {
     }
 };
 // text-speech api manual
-function test() {
-    VoiceRSS.speech({
-        key: '322a448e46dd4281b716d1ffcd5ec035',
-        src: 'Hello, world!',
-        hl: 'en-us',
-        r: 0,
-        f: '44khz_16bit_stereo',
-        ssml: false
-    });
+// function test() {
+//     VoiceRSS.speech({
+//         key: '322a448e46dd4281b716d1ffcd5ec035',
+//         src: 'Hello, world!',
+//         hl: 'en-us',
+//         r: 0,
+//         f: '44khz_16bit_stereo',
+//         ssml: false
+//     });
+// }
+// test();
+
+// Get Joke from Joke api
+async function getJokes() {
+    const apiUrl = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
+    try {
+       const response = await fetch(apiUrl);
+       const data = await response.json();
+       console.log(data);
+         
+    } catch (error) {
+        // catch errors
+        console.log('not working', error);
+    }
 }
-test();
+getJokes();
