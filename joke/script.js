@@ -74,7 +74,7 @@ const VoiceRSS = {
         throw "The browser does not support HTTP request"
     }
 };
-
+// text-speech api manual
 function test() {
     VoiceRSS.speech({
         key: '322a448e46dd4281b716d1ffcd5ec035',
