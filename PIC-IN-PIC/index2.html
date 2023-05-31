@@ -22,7 +22,7 @@
     <div class="how-to-use"> 
       <h2>How to Use?</h2>
       <p class="description">This script allows you to capture a window or Chrome browser tab and stream it in Picture-in-Picture mode. It works only in Chrome-based browsers.</p>
-      <p>Pick the source in the pop-up window and click "Start". You'll see the Picture-in-Picture sharing screen in the corner of your screen.</p>
+      <p>Pick the source in the pop-up window and click "Start". You'll see the Picture-in-Picture sharing screen in the corner of your screen. <strong>Picture-in-Picture will be automatic adjustible according to the screen you're streaming from(!)</strong></p>
     </div>
 
     <div class="video-container">
@@ -33,7 +33,11 @@
       <button class="button" id="button">START</button>
     </div>
   </div>
-
+  <div class="how-to-use"> 
+    <h2>Discription of the script</h2>
+    <p class="description">To utilize the API, developers can leverage the provided code snippet. The code utilizes the navigator.mediaDevices.getDisplayMedia() function to prompt the user to select a media stream, which typically represents a screen or application window. The selected media stream is then assigned to a video element (videoElement) on the page, allowing the user to see the chosen content.</p>
+    <p>Once the media stream is assigned, the code sets up an event listener (videoElement.onloadedmetadata) to ensure that the video is loaded and ready to play. When the metadata is loaded, the video starts playing automatically, providing an uninterrupted viewing experience for the user.</p>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
