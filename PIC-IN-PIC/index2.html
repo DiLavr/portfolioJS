@@ -32,16 +32,18 @@
     <div class="button-container">
       <button class="button" id="button">START</button>
     </div>
+
+    <div class="how-to-use"> 
+      <h2>git </h2>
+      <p class="description">To utilize the API, developers can leverage the provided code snippet. The code utilizes the navigator.mediaDevices.getDisplayMedia() function to prompt the user to select a media stream, which typically represents a screen or application window. The selected media stream is then assigned to a video element (videoElement) on the page, allowing the user to see the chosen content.</p>
+      <p>Once the media stream is assigned, the code sets up an event listener (videoElement.onloadedmetadata) to ensure that the video is loaded and ready to play. When the metadata is loaded, the video starts playing automatically, providing an uninterrupted viewing experience for the user.</p>
+    <p>Additionally, the code includes functionality to enable picture-in-picture mode upon clicking a button (button). When the button is clicked, it triggers the videoElement.requestPictureInPicture() function, which requests the browser to enter picture-in-picture mode with the selected video. This allows the video to be displayed in a floating window overlaying other content on the screen.</p>
+    <p>To enhance user experience, the code also disables the button during the picture-in-picture transition to prevent multiple requests and potential conflicts. Once the picture-in-picture mode is activated, the button is re-enabled, allowing the user to control and exit the picture-in-picture view as desired.</p>
+    <p>Upon loading the page, the selectMediaStream() function is called, initiating the prompt for the user to select the media source. This ensures that the picture-in-picture functionality is readily available and provides a seamless transition from single-window browsing to a multitasking environment.</p>
+    <p>In summary, this small project showcases the power of JavaScript and the Picture-in-Picture Chrome Browser API to integrate a picture-in-picture mode into the Chrome browser. It offers developers an efficient and straightforward solution for enhancing the browsing experience, while allowing users to conveniently view multiple websites simultaneously. The provided code demonstrates how to prompt the user for a media stream, enable picture-in-picture mode, and ensure smooth video playback.</p>
   </div>
-  <div class="how-to-use"> 
-    <h2>Discription of the script</h2>
-    <p class="description">To utilize the API, developers can leverage the provided code snippet. The code utilizes the navigator.mediaDevices.getDisplayMedia() function to prompt the user to select a media stream, which typically represents a screen or application window. The selected media stream is then assigned to a video element (videoElement) on the page, allowing the user to see the chosen content.</p>
-    <p>Once the media stream is assigned, the code sets up an event listener (videoElement.onloadedmetadata) to ensure that the video is loaded and ready to play. When the metadata is loaded, the video starts playing automatically, providing an uninterrupted viewing experience for the user.</p>
-  <p>Additionally, the code includes functionality to enable picture-in-picture mode upon clicking a button (button). When the button is clicked, it triggers the videoElement.requestPictureInPicture() function, which requests the browser to enter picture-in-picture mode with the selected video. This allows the video to be displayed in a floating window overlaying other content on the screen.</p>
-  <p>To enhance user experience, the code also disables the button during the picture-in-picture transition to prevent multiple requests and potential conflicts. Once the picture-in-picture mode is activated, the button is re-enabled, allowing the user to control and exit the picture-in-picture view as desired.</p>
-  <p>Upon loading the page, the selectMediaStream() function is called, initiating the prompt for the user to select the media source. This ensures that the picture-in-picture functionality is readily available and provides a seamless transition from single-window browsing to a multitasking environment.</p>
-  <p>In summary, this small project showcases the power of JavaScript and the Picture-in-Picture Chrome Browser API to integrate a picture-in-picture mode into the Chrome browser. It offers developers an efficient and straightforward solution for enhancing the browsing experience, while allowing users to conveniently view multiple websites simultaneously. The provided code demonstrates how to prompt the user for a media stream, enable picture-in-picture mode, and ensure smooth video playback.</p>
-</div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
