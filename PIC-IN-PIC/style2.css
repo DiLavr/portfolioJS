@@ -103,6 +103,25 @@ body {
   }
 }
 
+/* CSS class you can add to make a part of the text "stand up" */
+
+.stand-up {
+  display: inline-block;
+  animation: standUp 1s ease-in-out infinite;
+}
+
+@keyframes standUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Video Container Styles */
 .video-container {
   text-align: center;
